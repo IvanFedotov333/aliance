@@ -21,7 +21,11 @@ body {
   align-items: center;
   color: #fff;
   height: 84px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
 }
 .navbar-button {
@@ -29,6 +33,7 @@ body {
   height: 100%;
 }
 .header {
+  padding-top: 84px;
   min-height: 100vh;
 }
 .header-image {
