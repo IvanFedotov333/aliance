@@ -34,3 +34,34 @@ mMenuToggle.addEventListener("click", (event) => {
   event.preventDefault();
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 });
+
+// Swiper
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev",
+  },
+  speed: 400,
+  autoHeight: true,
+  breakpoints: {
+    "@0.32": {
+      slidesPerView: 1,
+    },
+    "@0.576": {
+      slidesPerView: 2,
+      centeredSlides: true,
+    },
+    "@0.768": {
+      slidesPerView: 3,
+    },
+    "@1.024": {
+      slidesPerView: 4,
+    },
+    "@1.44": {
+      slidesPerView: 5,
+    },
+  },
+});
