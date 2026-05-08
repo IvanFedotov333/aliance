@@ -48,22 +48,21 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".slider-button-prev",
   },
   speed: 400,
-  autoHeight: true,
   breakpoints: {
-    "@0.32": {
+    "320": {
       slidesPerView: 1,
     },
-    "@0.576": {
+    "576": {
       slidesPerView: 2,
       centeredSlides: true,
     },
-    "@0.768": {
+    "768": {
       slidesPerView: 3,
     },
-    "@1.024": {
+    "1024": {
       slidesPerView: 4,
     },
-    "@1.44": {
+    "1400": {
       slidesPerView: 5,
     },
   },
