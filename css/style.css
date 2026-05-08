@@ -173,11 +173,9 @@ body {
   margin-bottom: 2.4375rem;
   letter-spacing: -0.0125rem;
   word-spacing: 0.125rem;
-  
 }
 .header-features {
   display: flex;
-  /* max-height: 8.375rem; */
   padding: 0;
   margin-top: 4.4375rem;
   list-style: none;
@@ -231,7 +229,7 @@ body {
   gap: 2.8125rem;
 }
 .steps-item {
-  max-width: 15.125rem;
+  width: 15.125rem;
   flex-shrink: 0;
 }
 .steps-num {
@@ -285,6 +283,21 @@ body {
   background-color: #5c8ee5;
   margin-right: 1.25rem;
 }
+.steps-buttons {
+  display: none;
+  height: 40px;
+  justify-content: flex-end;
+}
+.steps-button-prev,
+.steps-button-next {
+  background: #5c8ee5;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 .mobile-socials {
   display: flex;
   flex-direction: row;
@@ -325,6 +338,9 @@ body {
     height: 5rem;
   }
   .slider-buttons {
+    display: flex;
+  }
+  .steps-buttons {
     display: flex;
   }
 }
