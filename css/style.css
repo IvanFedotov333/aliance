@@ -47,6 +47,9 @@ body {
 .phone-icon {
   fill: #5c8ee6;
 }
+.logo {
+  display: none;
+}
 .logo-svg {
   width: 6.875rem;
   height: 2.75rem;
@@ -209,7 +212,6 @@ body {
   line-height: 160%;
   letter-spacing: 0.0063rem;
 }
-
 
 .section {
   margin-top: 7.6875rem;
