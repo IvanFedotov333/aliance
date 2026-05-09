@@ -3,6 +3,9 @@ const logoLight = document.querySelector(".logo-light");
 const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
+const preventTouchScroll = (e) => {
+  e.preventDefault();
+};
 
 const lightModeOn = (event) => {
   navbar.classList.add("navbar-light");
@@ -20,13 +23,25 @@ const openMenu = (event) => {
   menu.classList.add("is-open"); //вешает класс "is-open"
   mMenuToggle.classList.add("close-menu");
   document.body.style.overflow = "hidden"; //прокрутка сайта под открытым меню запрещена
+  document.body.style.position = "fixed";
+  document.body.style.width = "100%";
+  document.addEventListener("touchmove", preventTouchScroll, {
+    passive: false,
+  });
   lightModeOn();
 };
 const closeMenu = (event) => {
   //фукнция закрывания меню
   menu.classList.remove("is-open"); //удаляет класс "is-open"
   mMenuToggle.classList.remove("close-menu");
-  document.body.style.overflow = ""; //прокрутка сайта под открытым меню доступна
+  document.body.style.overflow = "";
+  document.body.style.position = "";
+  document.body.style.width = ""; //прокрутка сайта под открытым меню
+  // доступна
+
+  document.removeEventListener("touchmove", preventTouchScroll, {
+    passive: false,
+  });
   lightModeOff();
 };
 

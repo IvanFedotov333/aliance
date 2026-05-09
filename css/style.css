@@ -346,6 +346,10 @@ body {
 }
 
 @media (max-width: 992px) {
+  body.menu-open {
+    position: fixed;
+    width: 100%;
+  }
   html {
     font-size: 12px;
   }
