@@ -46,7 +46,9 @@ const closeMenu = (event) => {
 };
 
 window.addEventListener("scroll", () => {
-  window.scrollY > 1 ? lightModeOn() : lightModeOff();
+  if (!menu.classList.contains("is-open")) {
+    window.scrollY > 1 ? lightModeOn() : lightModeOff();
+  }
 });
 mMenuToggle.addEventListener("click", (event) => {
   event.preventDefault();
