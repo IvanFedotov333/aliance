@@ -487,11 +487,11 @@ body {
 }
 .clients-logo {
   max-width: 100%;
-  filter: grayscale(1) brightness(0.5);
-  transition: filter 0.3s ease;
+  filter: grayscale(1);
+  transition: filter 0.2s ease;
 }
 .clients-logo:hover {
-  filter: grayscale(0) brightness(1);
+  filter: grayscale(0);
 }
 @media (max-width: 1440px) {
   html {
