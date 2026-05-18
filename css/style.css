@@ -314,16 +314,20 @@ body {
 .button-link:hover::before {
   width: 2.75rem;
 }
-.steps-buttons {
-  display: none;
-  height: 40px;
+
+.primary-buttons-wrapper {
+  display: flex;
+  height: 60px;
   justify-content: flex-end;
 }
-.steps-button-prev,
-.steps-button-next {
+.steps-buttons {
+  display: none;
+}
+.primary-button-prev,
+.primary-button-next {
   background: #5c8ee5;
   height: 100%;
-  width: 60px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,6 +497,53 @@ body {
 .clients-logo:hover {
   filter: grayscale(0);
 }
+.blog-card {
+  display: flex;
+  position: relative;
+  min-height: 25rem;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  justify-content: flex-end;
+  padding: 3.125rem;
+}
+.blog-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(41, 45, 51, 0.6);
+  z-index: -1;
+}
+.blog-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.blog-card-title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+.blog-card-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  margin: 0;
+}
+.blog-slider-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 1.875rem;
+  justify-content: space-between;
+}
 @media (max-width: 1440px) {
   html {
     font-size: 14px;
@@ -529,6 +580,13 @@ body {
   .slider-buttons {
     display: flex;
     margin-top: -0.98rem;
+  }
+  .primary-buttons-wrapper {
+    height: 40px;
+  }
+  .primary-button-prev,
+  .primary-button-next {
+    width: 60px;
   }
   .steps-buttons {
     display: flex;
