@@ -126,3 +126,27 @@ const swiperBlog = new Swiper(".blog-slider", {
     },
   },
 });
+
+const modal = document.querySelector(".modal");
+const modalToggle = document.querySelectorAll("[data-toggle=modal]");
+const modalClose = document.querySelector(".modal-close");
+modalToggle.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    event.preventDefault();
+    modal.classList.add("is-open");
+  });
+});
+modalClose.addEventListener("click", (event) => {
+  event.preventDefault();
+  modal.classList.remove("is-open");
+});
+modal.addEventListener("click", (event) => {
+  if (!event.target.closest(".modal-dialog")) {
+    modal.classList.remove("is-open");
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (modal.classList.contains("is-open") && event.key === "Escape") {
+    modal.classList.remove("is-open");
+  }
+});
