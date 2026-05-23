@@ -3,19 +3,21 @@ const logoLight = document.querySelector(".logo-light");
 const logo = document.querySelector(".logo");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
-const preventTouchScroll = (e) => {
-  e.preventDefault();
+const isFrontPage = document.body.classList.contains("front-page");
+
+const preventTouchScroll = (event) => {
+  event.preventDefault();
 };
 
 const lightModeOn = (event) => {
   navbar.classList.add("navbar-light");
-  logo.style.display = "block";
-  logoLight.style.display = "none";
 };
 const lightModeOff = (event) => {
   navbar.classList.remove("navbar-light");
-  logo.style.display = "none";
-  logoLight.style.display = "block";
+};
+
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
 };
 
 const openMenu = (event) => {
@@ -42,11 +44,20 @@ const closeMenu = (event) => {
   document.removeEventListener("touchmove", preventTouchScroll, {
     passive: false,
   });
-  lightModeOff();
+  changeNavHeight("5.875rem");
+  if (isFrontPage && window.scrollY <= 1) {
+    lightModeOff();
+  } else if (!isFrontPage) {
+  }
 };
 
 window.addEventListener("scroll", () => {
   if (!menu.classList.contains("is-open")) {
+    window.scrollY > 1
+      ? changeNavHeight("4.5rem")
+      : changeNavHeight("5.875rem");
+  }
+  if (isFrontPage && !menu.classList.contains("is-open")) {
     window.scrollY > 1 ? lightModeOn() : lightModeOff();
   }
 });
@@ -146,4 +157,3 @@ document.addEventListener("keydown", (event) => {
     modal.classList.remove("is-open");
   }
 });
-
