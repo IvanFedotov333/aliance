@@ -1,179 +1,8 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Контакты - Aliance Production</title>
-  </head>
-  <body>
-    <div class="mobile-menu">
-      <ul class="mobile-menu-nav">
-        <li class="mobile-menu-item">
-          <a href="/about.html" class="mobile-menu-link">О компании</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="/contract.html" class="mobile-menu-link"
-            >Контрактное производство</a
-          >
-          <ul class="mobile-submenu">
-            <li class="mobile-submenu-item">
-              <a href="/carchem.html" class="mobile-submenu-link"
-                >Автомобильная химия</a
-              >
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="" class="mobile-submenu-link">Бытовая химия</a>
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="" class="mobile-submenu-link"
-                >Дезинфицирующие средства</a
-              >
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="" class="mobile-submenu-link">Пищевые аэрозоли</a>
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="" class="mobile-submenu-link">Косметическая продукция</a>
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="" class="mobile-submenu-link">Краски аэрозольные</a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Собственные торговые марки</a>
-          <ul class="mobile-submenu">
-            <li class="mobile-submenu-item">
-              <a href="#" class="mobile-submenu-link">Автохимия AG-Tech</a>
-            </li>
-            <li class="mobile-submenu-item">
-              <a href="#" class="mobile-submenu-link">Автохимия AP</a>
-            </li>
-          </ul>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Новости</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#" class="mobile-menu-link">Контакты</a>
-        </li>
-      </ul>
-      <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
-      <div class="mobile-info">
-        <svg class="phone-icon" width="24" height="24">
-          <use href="img/sprite.svg#Location"></use>
-        </svg>
-        <address class="mobile-info-address">
-          г. Москва, Холодильный пер. 4к1с8
-        </address>
-      </div>
-      <div class="mobile-info">
-        <svg class="phone-icon" width="24" height="24">
-          <use href="img/sprite.svg#Mail"></use>
-        </svg>
-        <a href="mailto:a.dragunov@tdaliance.ru" class="mobile-info-email">
-          a.dragunov@tdaliance.ru
-        </a>
-      </div>
-      <div class="mobile-socials">
-        <svg class="VK-icon" width="24" height="24">
-          <use href="img/sprite.svg#VK"></use>
-        </svg>
-        <svg class="Inst-icon" width="24" height="24">
-          <use href="img/sprite.svg#Inst"></use>
-        </svg>
-      </div>
-      <!-- /.mobile-info -->
-    </div>
-    <nav class="navbar navbar-light">
-      <a href="#" class="mobile-menu-toggle">
-        <div class="mobile-menu-line"></div>
-        <div class="mobile-menu-line"></div>
-        <div class="mobile-menu-line"></div>
-      </a>
-      <a class="header-logo" href="./">
-        <svg class="logo-svg logo-light" width="110" height="44">
-          <use href="img/sprite.svg#logo-light"></use>
-        </svg>
-        <svg class="logo-svg logo-dark" width="110" height="44">
-          <use href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="header-nav">
-        <li class="header-nav-item">
-          <a href="/about.html" class="header-nav-link">О компании</a>
-        </li>
-        <li class="header-nav-item">
-          <a href="/contract.html" class="header-nav-link"
-            >Контрактное производство</a
-          >
-        </li>
-        <li class="header-nav-item">
-          <a href="/trademarks.html" class="header-nav-link"
-            >Собственные торговые марки</a
-          >
-        </li>
-        <li class="header-nav-item">
-          <a href="#" class="header-nav-link">Новости</a>
-        </li>
-        <li class="header-nav-item">
-          <a href="/contact.html" class="header-nav-link">Контакты</a>
-        </li>
-      </ul>
-      <div class="header-phone">
-        <svg class="phone-icon" width="20" height="20">
-          <use href="img/sprite.svg#phone"></use>
-        </svg>
-        <a href="tel:+74996861014" class="header-phone-link"
-          >+7 (499) 686-10-14
-        </a>
-      </div>
-      <!-- /.header-phone -->
-      <button class="navbar-button button" data-toggle="modal">
-        <svg class="button-icon" width="20" height="20">
-          <use href="img/sprite.svg#phone"></use>
-        </svg>
-        <div class="button-text">Получить консультацию</div>
-      </button>
-    </nav>
-    <!-- /.navbar -->
-    <header class="header-contact">
-      <div class="bg-gray">
-        <div class="container">
-          <div class="header-content">
-            <div class="separator"></div>
-            <h2 class="section-title">Контакты</h2>
-          </div>
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="./" class="breadcrumb-link">Главная</a>
-              </li>
-              <li
-                class="breadcrumb-item breadcrumb-item--active"
-                aria-current="page"
-              >
-                Контакты
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <section class="cta">
+<section class="cta">
       <div class="bg-gray section-cta">
         <img src="img/cta.png" alt="call to action" class="cta-image" />
         <div class="cta-form-wrapper container">
-          <form action="#" class="cta-form">
+          <form action="handler.php" method="POST" class="cta-form">
             <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
             <p class="cta-form-text">
               Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
@@ -186,13 +15,14 @@
                   id="user-name"
                   type="text"
                   class="input"
+                  name="username"
                   placeholder=" "
                 />
                 <label class="input-group-label" for="user-name">Имя</label>
               </div>
               <!-- /.input-group -->
               <div class="input-group">
-                <input id="user-tel" type="tel" class="input" placeholder=" " />
+                <input id="user-tel" type="tel" class="input" name="userphone" placeholder=" " />
                 <label class="input-group-label" for="user-tel"
                   >Номер телефона</label
                 >
@@ -224,7 +54,7 @@
           <svg class="logo-svg footer-logo">
             <use href="img/sprite.svg#logo"></use>
           </svg>
-          <a href="tel:+74996861014" class="footer-phone">+7 (499) 686-10-14</a>
+          <a href="tel:+79816861014" class="footer-phone">+7 (981) 686-10-14</a>
           <div class="footer-info">
             <svg class="footer-top-icon" width="24" height="24">
               <use href="img/sprite.svg#Location"></use>
@@ -325,7 +155,7 @@
         <div class="footer-wrapper">
           <div class="footer-legal">
             <p class="footer-copyright">
-              &copy; 2022 «Aliance Production». Все права защищены.
+              &copy; <?php echo date('Y')?> «Aliance Production». Все права защищены.
             </p>
             <a href="#" class="footer-policy">Политики конфиденциальности</a>
           </div>
