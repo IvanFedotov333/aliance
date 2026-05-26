@@ -17,12 +17,14 @@
                   class="input"
                   name="username"
                   placeholder=" "
+                  maxlength="100"
+                  required
                 />
                 <label class="input-group-label" for="user-name">Имя</label>
               </div>
               <!-- /.input-group -->
               <div class="input-group">
-                <input id="user-tel" type="tel" class="input" name="userphone" placeholder=" " />
+                <input id="user-tel" type="tel" class="input" name="userphone" placeholder=" " required/>
                 <label class="input-group-label" for="user-tel"
                   >Номер телефона</label
                 >
