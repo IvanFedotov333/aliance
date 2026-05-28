@@ -173,7 +173,7 @@
       </div>
       <!-- /.container -->
     </footer>
-    <div class="modal">
+    <div id="modal-consultation" class="modal">
       <div class="modal-dialog">
         <h2 class="modal-title">Есть вопросы?</h2>
         <a href="#" class="modal-close" data-toggle="modal">
@@ -186,7 +186,7 @@
           ответит на все интересующие вопросы и поможем даже в самых сложных
           случаях!
         </p>
-        <form action="#" class="modal-form">
+        <form action="handler.php" method="POST" class="modal-form">
           <div class="input-group-wrapper input-group-column">
             <div class="input-group modal-input-group">
               <input
@@ -194,6 +194,7 @@
                 type="text"
                 class="input modal-input"
                 placeholder=" "
+                name="username"
               />
               <label class="input-group-label" for="modal-user-name">Имя</label>
             </div>
@@ -204,6 +205,7 @@
                 type="tel"
                 class="input modal-input"
                 placeholder=" "
+                name="userphone"
               />
               <label class="input-group-label" for="modal-user-tel"
                 >Номер телефона</label
@@ -228,6 +230,9 @@
         </form>
       </div>
     </div>
+    <?php include_once 'modal-success.php';?>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

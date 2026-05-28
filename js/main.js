@@ -142,18 +142,91 @@ const modal = document.querySelector(".modal");
 const modalDialog = document.querySelector(".modal-dialog");
 
 document.addEventListener("click", (event) => {
-  if (
-    event.target.dataset.toggle == "modal" ||
-    event.target.parentNode.dataset.toggle == "modal" ||
-    (!event.composedPath().includes(modalDialog) &&
-      modal.classList.contains("is-open"))
-  ) {
+  const toggleButton = event.target.closest('[data-toggle="modal"]');
+  if (toggleButton) {
     event.preventDefault();
-    modal.classList.toggle("is-open");
+    const parentModal = toggleButton.closest(".modal");
+    if (parentModal) {
+      parentModal.classList.toggle("is-open");
+    } else {
+      const consultModal = document.getElementById("modal-consultation");
+      if (consultModal) {
+        consultModal.classList.add("is-open");
+      }
+    }
+    return;
   }
+  const openModals = document.querySelectorAll(".modal.is-open");
+  openModals.forEach((openModal) => {
+    const dialog = openModal.querySelector(".modal-dialog");
+    if (dialog && !event.composedPath().includes(dialog)) {
+      event.preventDefault();
+      openModal.classList.remove("is-open");
+    }
+  });
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && modal.classList.contains("is-open")) {
-    modal.classList.remove("is-open");
+  if (event.key === "Escape") {
+    const openModals = document.querySelectorAll(".modal.is-open");
+    openModals.forEach((modal) => modal.classList.remove("is-open"));
   }
+});
+document
+  .getElementById("modal-success-btn")
+  ?.addEventListener("click", function () {
+    document.getElementById("modal-success").classList.remove("is-open");
+    window.location.href = "./";
+  });
+
+const forms = document.querySelectorAll("form"); // собираем все формы
+forms.forEach((form) => {
+  const phoneInput = form.querySelector('[name="userphone"]');
+  if (phoneInput) {
+    phoneInput.addEventListener("focus", function initMask() {
+      Inputmask("+7 (999) 999-99-99", {
+        showMaskOnHover: false,
+        clearMaskOnLostFocus: false,
+      }).mask(this);
+      this.removeEventListener("focus", initMask);
+    });
+  }
+  const validation = new JustValidate(form, {
+    errorFieldCssClass: "is-invalid",
+  });
+  validation
+    .addField("[name=username]", [
+      {
+        rule: "required",
+        errorMessage: "Укажите имя",
+      },
+      {
+        rule: "maxLength",
+        value: 50,
+        errorMessage: "Максимально 50 символов",
+      },
+    ])
+    .addField("[name=userphone]", [
+      {
+        rule: "required",
+        errorMessage: "Укажите номер телефона",
+      },
+    ])
+    .onSuccess((event) => {
+      const thisForm = event.target; // наша форма
+      const formData = new FormData(thisForm); // данные из нашей формы
+      const ajaxSend = (formData) => {
+        fetch(thisForm.getAttribute("action"), {
+          method: thisForm.getAttribute("method"),
+          body: formData,
+        }).then((response) => {
+          if (response.ok) {
+            thisForm.reset();
+            document.getElementById("modal-success").classList.add("is-open");
+          } else {
+            alert("Ошибка. Текст ошибки: " + response.statusText);
+          }
+        });
+      };
+      ajaxSend(formData);
+    });
 });
