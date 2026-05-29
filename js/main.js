@@ -1,3 +1,5 @@
+// Burger-menu
+
 const navbar = document.querySelector(".navbar");
 const logoLight = document.querySelector(".logo-light");
 const logo = document.querySelector(".logo");
@@ -66,7 +68,8 @@ mMenuToggle.addEventListener("click", (event) => {
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 });
 
-// Swiper
+// Swiper-slider
+
 const swiperSteps = new Swiper(".steps-slider", {
   speed: 400,
   slidesPerView: 1,
@@ -138,45 +141,84 @@ const swiperBlog = new Swiper(".blog-slider", {
   },
 });
 
-const modal = document.querySelector(".modal");
-const modalDialog = document.querySelector(".modal-dialog");
+// Modal-windows
 
-document.addEventListener("click", (event) => {
-  const toggleButton = event.target.closest('[data-toggle="modal"]');
-  if (toggleButton) {
+let currentModal; // текущее модальное окно
+let modalDialog; // диалоговое окно
+let alertModal = document.querySelector("#alert-modal"); // окно предупреждения
+
+const modalButtons = document.querySelectorAll("[data-toggle=modal]");
+// все кнопки-переключатели модальных окон
+modalButtons.forEach((button) => {
+  // прослушивание клика по переключателю
+  button.addEventListener("click", (event) => {
     event.preventDefault();
-    const parentModal = toggleButton.closest(".modal");
-    if (parentModal) {
-      parentModal.classList.toggle("is-open");
-    } else {
-      const consultModal = document.getElementById("modal-consultation");
-      if (consultModal) {
-        consultModal.classList.add("is-open");
+    // определение текущего окна
+    currentModal = document.querySelector(button.dataset.target);
+    // открытие текущего окна
+    currentModal.classList.toggle("is-open");
+    // назначение нового диалогового окна
+    modalDialog = currentModal.querySelector(".modal-dialog");
+    // прослушивание события клика внутри диалогового окна и в пустой области
+    currentModal.addEventListener("click", (event) => {
+      // если клик в пустую область
+      if (!event.composedPath().includes(modalDialog)) {
+        // закрываем окно
+        currentModal.classList.remove("is-open");
       }
-    }
-    return;
-  }
-  const openModals = document.querySelectorAll(".modal.is-open");
-  openModals.forEach((openModal) => {
-    const dialog = openModal.querySelector(".modal-dialog");
-    if (dialog && !event.composedPath().includes(dialog)) {
-      event.preventDefault();
-      openModal.classList.remove("is-open");
-    }
+    });
   });
 });
+// прослушивание события клика по кнопке
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    const openModals = document.querySelectorAll(".modal.is-open");
-    openModals.forEach((modal) => modal.classList.remove("is-open"));
+  // если кнопка = Esc и текущее окно открыто
+  if (event.key == "Escape" && currentModal.classList.contains("is-open")) {
+    // закрываем это окно
+    currentModal.classList.toggle("is-open");
   }
 });
-document
-  .getElementById("modal-success-btn")
-  ?.addEventListener("click", function () {
-    document.getElementById("modal-success").classList.remove("is-open");
-    window.location.href = "./";
-  });
+
+// const modal = document.querySelector(".modal");
+// const modalDialog = document.querySelector(".modal-dialog");
+
+// document.addEventListener("click", (event) => {
+//   const toggleButton = event.target.closest('[data-toggle="modal"]');
+//   if (toggleButton) {
+//     event.preventDefault();
+//     const parentModal = toggleButton.closest(".modal");
+//     if (parentModal) {
+//       parentModal.classList.toggle("is-open");
+//     } else {
+//       const consultModal = document.getElementById("modal-consultation");
+//       if (consultModal) {
+//         consultModal.classList.add("is-open");
+//       }
+//     }
+//     return;
+//   }
+//   const openModals = document.querySelectorAll(".modal.is-open");
+//   openModals.forEach((openModal) => {
+//     const dialog = openModal.querySelector(".modal-dialog");
+//     if (dialog && !event.composedPath().includes(dialog)) {
+//       event.preventDefault();
+//       openModal.classList.remove("is-open");
+//     }
+//   });
+// });
+// document.addEventListener("keydown", (event) => {
+//   if (event.key === "Escape") {
+//     const openModals = document.querySelectorAll(".modal.is-open");
+//     openModals.forEach((modal) => modal.classList.remove("is-open"));
+//   }
+// });
+// document
+//   .getElementById("modal-success-btn")
+//   ?.addEventListener("click", function () {
+//     document.getElementById("modal-success").classList.remove("is-open");
+//     window.location.href = "./";
+//   });
+
+// Feedback-form
 
 const forms = document.querySelectorAll("form"); // собираем все формы
 forms.forEach((form) => {
@@ -221,7 +263,24 @@ forms.forEach((form) => {
         }).then((response) => {
           if (response.ok) {
             thisForm.reset();
-            document.getElementById("modal-success").classList.add("is-open");
+            if (currentModal && currentModal.classList.contains("is-open")) {
+              currentModal.classList.remove("is-open");
+            }
+            alertModal.classList.add("is-open");
+            currentModal = alertModal;
+            modalDialog = currentModal.querySelector(".modal-dialog");
+            // прослушивание события клика внутри диалогового окна и в пустой области
+            currentModal.addEventListener(
+              "click",
+              function overlayHandler(event) {
+                // если клик в пустую область
+                if (!event.composedPath().includes(modalDialog)) {
+                  // закрываем окно
+                  currentModal.classList.remove("is-open");
+                  currentModal.removeEventListener("click", overlayHandler);
+                }
+              },
+            );
           } else {
             alert("Ошибка. Текст ошибки: " + response.statusText);
           }
@@ -229,4 +288,8 @@ forms.forEach((form) => {
       };
       ajaxSend(formData);
     });
+});
+document.getElementById("modal-success-btn")?.addEventListener("click", function () {
+  document.getElementById("alert-modal").classList.remove("is-open");
+  window.location.href = "./";
 });
