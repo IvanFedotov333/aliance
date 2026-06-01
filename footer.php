@@ -104,7 +104,7 @@
             <h2 class="footer-menu-title">Контрактное производство</h2>
             <ul class="footer-menu-list footer-menu-column-two">
               <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Автомобильная химия</a>
+                <a href="./carchem.php" class="footer-menu-link">Автомобильная химия</a>
               </li>
               <li class="footer-menu-item">
                 <a href="#" class="footer-menu-link">Бытовая химия</a>
@@ -129,7 +129,7 @@
             <h2 class="footer-menu-title">Собственные марки</h2>
             <ul class="footer-menu-list">
               <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Автохимия AG-Tech</a>
+                <a href="./carchem-ag-tech.php" class="footer-menu-link">Автохимия AG-Tech</a>
               </li>
               <li class="footer-menu-item">
                 <a href="#" class="footer-menu-link">Автохимия AP</a>
@@ -140,7 +140,7 @@
           <div class="footer-menu-wrapper">
             <ul class="footer-menu-list">
               <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link footer-menu-link-bold"
+                <a href="./about.php" class="footer-menu-link footer-menu-link-bold"
                   >О компании</a
                 >
               </li>
@@ -150,7 +150,7 @@
                 >
               </li>
               <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link footer-menu-link-bold"
+                <a href="./contact.php" class="footer-menu-link footer-menu-link-bold"
                   >Контакты</a
                 >
               </li>
@@ -166,7 +166,7 @@
             <p class="footer-copyright">
               &copy; <?php echo date('Y')?> «Aliance Production». Все права защищены.
             </p>
-            <a href="#" class="footer-policy">Политики конфиденциальности</a>
+            <a href="#" class="footer-policy">Политика конфиденциальности</a>
           </div>
           <!-- /.footer-legal -->
           <div class="footer-author">
@@ -237,21 +237,6 @@
         </form>
       </div>
     </div>
-    <!-- <div id="alert-modal" class="modal">
-      <div class="modal-dialog">
-        <h2 class="modal-title">Спасибо!</h2>
-        <a href="#" class="modal-close" data-toggle="modal" data-target="#alert-modal">
-          <svg class="close-icon" width="24" height="24">
-            <use href="img/sprite.svg#close"></use>
-          </svg>
-        </a>
-        <p class="modal-text">
-          Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
-          ответит на все интересующие вопросы и поможем даже в самых сложных
-          случаях!
-        </p>
-      </div>
-    </div> -->
     <?php include_once 'modal-success.php';?>
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>

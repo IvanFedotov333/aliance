@@ -12,20 +12,20 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>Aliance Production</title>
+  <title><?= $page_title; ?> - Aliance Production</title>
 </head>
 
-<body class="front-page">
+<body>
   <div class="mobile-menu">
     <ul class="mobile-menu-nav">
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">О компании</a>
+        <a href="./about.php" class="mobile-menu-link">О компании</a>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Контрактное производство</a>
+        <a href="./contract.php" class="mobile-menu-link">Контрактное производство</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
-            <a href="" class="mobile-submenu-link">Автомобильная химия</a>
+            <a href="./carchem.php" class="mobile-submenu-link">Автомобильная химия</a>
           </li>
           <li class="mobile-submenu-item">
             <a href="" class="mobile-submenu-link">Бытовая химия</a>
@@ -48,7 +48,7 @@
         <a href="#" class="mobile-menu-link">Собственные торговые марки</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
-            <a href="#" class="mobile-submenu-link">Автохимия AG-Tech</a>
+            <a href="./carchem-ag-tech.php" class="mobile-submenu-link">Автохимия AG-Tech</a>
           </li>
           <li class="mobile-submenu-item">
             <a href="#" class="mobile-submenu-link">Автохимия AP</a>
@@ -89,7 +89,7 @@
     </div>
     <!-- /.mobile-info -->
   </div>
-  <nav class="navbar">
+  <nav class="navbar navbar-light">
     <a href="#" class="mobile-menu-toggle">
       <div class="mobile-menu-line"></div>
       <div class="mobile-menu-line"></div>
@@ -136,42 +136,25 @@
     </button>
   </nav>
   <!-- /.navbar -->
-  <header class="header header-image">
-    <div class="container">
-      <div class="header-content">
-        <div class="separator"></div>
-        <h1 class="header-title">
-          <?php echo "Комплексное обеспечение товарами и расходными материалами бизнеса"; ?>
-        </h1>
-        <p class="header-text">
-          Высокий уровень вовлечения представителей целевой аудитории является
-          четким доказательством простого факта: высококачественный прототип
-          будущего проекта напрямую зависит от анализа существующих паттернов
-          поведения.
-        </p>
-        <button class="button header-button" data-toggle="modal" data-target="#feedback-modal">
-          Подробнее о компании
-        </button>
+  <header class="header-about">
+    <div class=" <?= $background_style ?>">
+      <div class="container ">
+        <div class="header-content">
+          <div class="separator"></div>
+          <h2 class="section-title"><?= $page_title; ?></h2>
+        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a href="./" class="breadcrumb-link">Главная</a>
+            </li>
+            <li
+              class="breadcrumb-item breadcrumb-item--active"
+              aria-current="page">
+              <?= $page_title; ?>
+            </li>
+          </ol>
+        </nav>
       </div>
-      <!-- /.header-content -->
-
-      <!-- Основной блок слайдера -->
-      <?php include_once('./templates/features-slider-block.php'); ?>
     </div>
-    <!-- /.container -->
   </header>
-  <?php include_once('./templates/steps-block.php'); ?>
-  <?php $block_title = 'Контрактное производство';
-  include_once('./templates/contract-block.php') ?>
-  <?php $block_title = 'Собственные торговые марки';
-  include_once('./templates/trademark-block.php') ?>
-  <?php include_once('./templates/founder-block.php'); ?>
-  <?php include_once('./templates/clients-block.php'); ?>
-  <section class="section blog">
-    <div class="container">
-      <div class="separator"></div>
-      <h2 class="section-title">Блог экспертов в области производства</h2>
-      <?php include_once('./templates/blog-slider-block.php'); ?>
-    </div>
-  </section>
-  <?php include_once('footer.php'); ?>

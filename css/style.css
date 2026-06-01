@@ -76,7 +76,86 @@ body {
   right: 0;
   max-width: 20rem;
 }
+.preparation-image {
+  max-width: 42.5rem;
+}
+.preparation-content-wrapper .clients-list-item {
+  padding-top: 10px;
+}
+.about-image {
+  max-width: 25rem;
+}
+.about-content,
+.property-content,
+.carchem-production-content,
+.preparation-content,
+.carchem-ag-tech-content,
+.distribution-content {
+  display: flex;
+  gap: 7.5rem;
+}
+.distribution-content .clients-list-item {
+  padding-top: 1.25rem;
+}
+.about-content-wrapper .section-title {
+  max-width: 39.125rem;
+}
+.about-text,
+.preparation-text,
+.ag-tech-text,
+.distribution-text {
+  max-width: 51.4375rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+}
 
+.property-text,
+.carchem-types-content {
+  max-width: 52.4375rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 4rem;
+}
+.property-image {
+  max-width: 37.5rem;
+}
+.property-block-item {
+  padding-bottom: 2rem;
+}
+
+.section.carchem-production {
+  margin-bottom: 1rem;
+}
+
+.carchem-content-wrapper {
+  max-width: 45rem;
+}
+.carchem-content-wrapper .section-title,
+.carchem-ag-tech-content .section-title {
+  max-width: 30rem;
+}
+.carchem-text {
+  max-width: 51.4375rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+}
+.carchem-types-list {
+  list-style: none;
+  columns: 4 auto;
+}
+.carchem-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-top: 1.25rem;
+  max-width: 18.75rem;
+}
 .breadcrumb {
   margin-bottom: 1.5rem;
   padding-bottom: 39px;
@@ -149,6 +228,22 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+.btn-catalog {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a71d1;
+  color: #ffffff;
+  padding: 25px 60px;
+  gap: 10px;
+  text-decoration: none;
+  margin-top: 3.125rem;
+  margin-bottom: 6.25rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8125rem;
 }
 .header-image {
   background-image: url("../img/header-bg.jpg");
@@ -237,6 +332,7 @@ body {
 .header-methods .breadcrumb-item--active {
   color: #ffffff;
 }
+
 .button {
   line-height: 160%;
   color: #ffffff;
@@ -311,6 +407,9 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.slider-darkmode .header-features-text {
+  color: #292d33;
 }
 .header-features-item {
   height: auto;
@@ -467,6 +566,7 @@ body {
 .card-content {
   padding: 2.5rem 3.125rem;
 }
+
 .trademark-cards {
   display: flex;
 }
@@ -583,6 +683,21 @@ body {
 .clients-logo:hover {
   filter: grayscale(0);
 }
+.distribution {
+  background: #f0f2f5;
+  padding-top: 6.25rem;
+  position: relative;
+}
+.distribution-image {
+  max-width: 43.75rem;
+  margin-right: -2.5rem;
+  margin-top: -2.5rem;
+}
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
 .blog-card {
   display: flex;
   position: relative;
@@ -624,6 +739,20 @@ body {
   line-height: 160%;
   margin: 0;
 }
+.blog-pagination {
+  margin-top: 40px;
+}
+.blog-pagination-link {
+  text-decoration: none;
+}
+.blog-bagination-list {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  list-style: none;
+  gap: 35px;
+  padding-right: 1rem;
+}
 .blog-slider-footer {
   display: flex;
   align-items: center;
@@ -632,6 +761,22 @@ body {
 }
 .bg-gray {
   background: #f0f2f5;
+}
+.header-with-image {
+  position: relative;
+  overflow: hidden;
+}
+.header-with-image::before {
+  content: "";
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/avto-him.png);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: 0;
+  top: -20px;
 }
 .section-cta {
   position: relative;
@@ -927,6 +1072,20 @@ body {
   margin-bottom: 24px;
   width: 100%;
   display: block;
+}
+.research-text {
+  column-count: 2;
+  column-gap: 6.25rem;
+  gap: 5.625rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 4rem;
+}
+
+.research-content .section-title {
+  max-width: 30rem;
 }
 @media (max-width: 1440px) {
   html {

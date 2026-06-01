@@ -289,7 +289,9 @@ forms.forEach((form) => {
       ajaxSend(formData);
     });
 });
-document.getElementById("modal-success-btn")?.addEventListener("click", function () {
-  document.getElementById("alert-modal").classList.remove("is-open");
-  window.location.href = "./";
-});
+document
+  .getElementById("modal-success-btn")
+  ?.addEventListener("click", function () {
+    document.getElementById("alert-modal").classList.remove("is-open");
+    window.location.href = "./";
+  });
