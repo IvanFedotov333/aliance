@@ -178,46 +178,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// const modal = document.querySelector(".modal");
-// const modalDialog = document.querySelector(".modal-dialog");
-
-// document.addEventListener("click", (event) => {
-//   const toggleButton = event.target.closest('[data-toggle="modal"]');
-//   if (toggleButton) {
-//     event.preventDefault();
-//     const parentModal = toggleButton.closest(".modal");
-//     if (parentModal) {
-//       parentModal.classList.toggle("is-open");
-//     } else {
-//       const consultModal = document.getElementById("modal-consultation");
-//       if (consultModal) {
-//         consultModal.classList.add("is-open");
-//       }
-//     }
-//     return;
-//   }
-//   const openModals = document.querySelectorAll(".modal.is-open");
-//   openModals.forEach((openModal) => {
-//     const dialog = openModal.querySelector(".modal-dialog");
-//     if (dialog && !event.composedPath().includes(dialog)) {
-//       event.preventDefault();
-//       openModal.classList.remove("is-open");
-//     }
-//   });
-// });
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "Escape") {
-//     const openModals = document.querySelectorAll(".modal.is-open");
-//     openModals.forEach((modal) => modal.classList.remove("is-open"));
-//   }
-// });
-// document
-//   .getElementById("modal-success-btn")
-//   ?.addEventListener("click", function () {
-//     document.getElementById("modal-success").classList.remove("is-open");
-//     window.location.href = "./";
-//   });
-
 // Feedback-form
 
 const forms = document.querySelectorAll("form"); // собираем все формы
@@ -295,3 +255,21 @@ document
     document.getElementById("alert-modal").classList.remove("is-open");
     window.location.href = "./";
   });
+
+// Blog-pagination
+
+const links = document.querySelectorAll(".blog-pagination-link"); // ищем все ссылки
+links.forEach(function (link) {
+  // проходим по каждой ссылке и навешиваем на них новую функцию с параметром link
+  link.addEventListener("click", function (event) {
+    // навешиваем слушатель события click на каждую конкретную ссылку с запуском новой функции
+    event.preventDefault(); // отменяем стандарное поведение для ссылки (href)
+    links.forEach(function (item) {
+      // снова обходим все ссылки
+      item.classList.remove("pagination-link-active"); // удаляем класс pagination-link-active
+      item.removeAttribute("aria-current"); // и атрибут aria-current
+    });
+    this.classList.add("pagination-link-active");
+    this.setAttribute("aria-current", "page");
+  });
+});
