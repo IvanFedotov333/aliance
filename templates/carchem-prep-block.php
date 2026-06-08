@@ -56,7 +56,11 @@
           </li>
         </ul>
       </div>
-      <img src="img/microscope.jpg" alt="Изображение лаборанта с микроскопом" class="preparation-image">
+      <picture class="preparation-image">
+        <source type="image/webp" srcset="img/microscope.webp">
+        <source type="image/jpeg" srcset="img/microscope.jpg">
+        <img src="img/microscope.jpg" alt="Изображение лаборанта с микроскопом">
+      </picture>
     </div>
   </div>
 </section>

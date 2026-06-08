@@ -44,7 +44,11 @@
           </li>
         </ul>
       </div>
-      <img src="img/assistant.jpg" alt="Фото лаборанта" class="property-image">
+      <picture class="property-image">
+        <source type="image/webp" srcset="img/assistant.webp">
+        <source type="image/jpeg" srcset="img/assistant.jpg">
+        <img src="img/assistant.jpg" alt="Фото лаборанта">
+      </picture>
     </div>
   </div>
 </section>

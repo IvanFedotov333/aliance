@@ -1,7 +1,11 @@
 <section class="section carchem-production">
   <div class="container">
     <div class="carchem-production-content">
-      <img src="../img/carchem.jpg" alt="Фото лаборатории" class="carchem-image">
+      <picture class="carchem-image">
+        <source type="image/webp" srcset="img/carchem.webp">
+        <source type="image/jpeg" srcset="img/carchem.jpg">
+        <img src="img/carchem.jpg" alt="Фото лаборатории">
+      </picture>
       <div class="carchem-content-wrapper">
         <div class="separator"></div>
         <h2 class="section-title">Контрактное производство автомобильной химии</h2>

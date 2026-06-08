@@ -4,14 +4,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Предзагрузка локальных шрифтов (оставь как есть, это правильно) -->
+  <link rel="preload" href="/fonts/notosans-cyrillic-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/notosans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/notosans-cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/notosans-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/notosans-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/notosans-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Асинхронная загрузка CSS (не блокирует рендер) -->
+  <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
+
+  <!-- Резерв для браузеров без JavaScript -->
+  <noscript>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </noscript>
   <title>Aliance Production</title>
 </head>
 

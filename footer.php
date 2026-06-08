@@ -230,10 +230,10 @@
   </div>
 </div>
 <?php include_once 'modal-success.php'; ?>
-<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
-<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+<script src="js/swiper-bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 
 </html>

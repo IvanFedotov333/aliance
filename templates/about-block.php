@@ -1,7 +1,11 @@
 <section class="section about">
   <div class="container">
     <div class="about-content">
-      <img src="img/about-img.png" alt="Изображение логотипа компании" class="about-image">
+      <picture class="about-image">
+        <source type="image/webp" srcset="img/about-img.webp">
+        <source type="image/jpeg" srcset="img/about-img.jpg">
+        <img src="img/about-img.png" alt="Изображение логотипа компании">
+      </picture>
       <div class="about-content-wrapper">
         <div class="separator"></div>
         <h2 class="section-title">Мы - эксперты в области производства химии</h2>

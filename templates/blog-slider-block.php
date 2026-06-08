@@ -2,10 +2,12 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <a href="../methods.php" class="swiper-slide blog-card"><img
-        src="img/blog/blog-photo.jpg"
-        alt=""
-        class="blog-card-image" />
+    <a href="../methods.php" class="swiper-slide blog-card">
+      <picture class="blog-card-image">
+        <source type="image/webp" srcset="img/blog/blog-photo.webp">
+        <source type="image/jpeg" srcset="img/blog/blog-photo.jpg">
+        <img src="img/blog/blog-photo.jpg" alt="Изображение блога">
+      </picture>
       <h3 class="blog-card-title">
         Современная методология разработки одухотворила всех причастных
       </h3>
@@ -15,10 +17,12 @@
         предоставлены...
       </p>
     </a>
-    <a href="#" class="swiper-slide blog-card"><img
-        src="img/blog/blog-post.jpg"
-        alt=""
-        class="blog-card-image" />
+    <a href="#" class="swiper-slide blog-card">
+      <picture class="blog-card-image">
+        <source type="image/webp" srcset="img/blog/blog-post.webp">
+        <source type="image/jpeg" srcset="img/blog/blog-post.jpg">
+        <img src="img/blog/blog-post.jpg" alt="Изображение блога">
+      </picture>
       <h3 class="blog-card-title">
         Сложно сказать, почему жизнь прекрасна
       </h3>
@@ -28,10 +32,12 @@
         высокотехнологичная...
       </p>
     </a>
-    <a href="../methods.php" class="swiper-slide blog-card"><img
-        src="img/blog/blog-photo.jpg"
-        alt=""
-        class="blog-card-image" />
+    <a href="../methods.php" class="swiper-slide blog-card">
+      <picture class="blog-card-image">
+        <source type="image/webp" srcset="img/blog/blog-photo.webp">
+        <source type="image/jpeg" srcset="img/blog/blog-photo.jpg">
+        <img src="img/blog/blog-photo.jpg" alt="Изображение блога">
+      </picture>
       <h3 class="blog-card-title">
         Современная методология разработки одухотворила всех причастных
       </h3>

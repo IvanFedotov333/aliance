@@ -40,7 +40,11 @@
           <br>
           Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет выполнять важные задания по разработке форм развития. Задача организации, в особенности же постоянный <a href="#">количественный рост</a> и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.
         </p>
-        <img src="../img/blog/blog-photo.jpg" alt="Фото лаборатории" class="cons-image">
+        <picture class="cons-image">
+          <source type="image/webp" srcset="img/blog/blog-photo.webp">
+          <source type="image/jpeg" srcset="img/blog/blog-photo.jpg">
+          <img src="img/blog/blog-photo.jpg" alt="Фото лаборатории">
+        </picture>
         <h4 class="consulting-list-title">Равным образом консультация с широким активом:</h4>
         <ul class="consulting-list">
           <li class="consulting-list-item">

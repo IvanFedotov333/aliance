@@ -1,7 +1,11 @@
 <section class="section carchem-ag-tech">
   <div class="container">
     <div class="carchem-ag-tech-content">
-      <img src="../img/ag-tech-img.jpg" alt="Технологии AG-Tech" class="ag-tech-image">
+      <picture class="ag-tech-image">
+        <source type="image/webp" srcset="img/ag-tech-img.webp">
+        <source type="image/jpeg" srcset="img/ag-tech-img.jpg">
+        <img src="img/ag-tech-img.jpg" alt="Технологии AG-Tech">
+      </picture>
       <div class="ag-tech-content-wrapper">
         <div class="separator"></div>
         <h2 class="section-title">Собственное производство автохимия AG-Tech</h2>
