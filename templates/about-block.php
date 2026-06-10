@@ -14,6 +14,7 @@
     </div>
     <?php
     $slider_mode = 'slider-darkmode';
+    $slider_buttons_mode = 'slider-buttons-lightmode';
     include_once('./templates/features-slider-block.php'); ?>
   </div>
 </section>

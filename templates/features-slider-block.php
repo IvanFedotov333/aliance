@@ -38,7 +38,7 @@
     </li>
   </ul>
   <!-- Кнопки навигации -->
-  <div class="slider-buttons">
+  <div class="slider-buttons <?= isset($slider_buttons_mode) ? $slider_buttons_mode : '' ?>">
     <div class="slider-button-prev">
       <svg width="30" height="24">
         <use href="img/sprite.svg#prev"></use>

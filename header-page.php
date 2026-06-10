@@ -38,7 +38,7 @@
         </ul>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Собственные торговые марки</a>
+        <a href="./trademarks.php" class="mobile-menu-link">Собственные торговые марки</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
             <a href="./carchem-ag-tech.php" class="mobile-submenu-link">Автохимия AG-Tech</a>
@@ -52,7 +52,7 @@
         <a href="#" class="mobile-menu-link">Новости</a>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Контакты</a>
+        <a href="./contact.php" class="mobile-menu-link">Контакты</a>
       </li>
     </ul>
     <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>

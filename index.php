@@ -16,7 +16,11 @@
   <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
   <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null; this.rel='stylesheet'">
-
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <!-- Резерв для браузеров без JavaScript -->
   <noscript>
     <link rel="stylesheet" href="css/normalize.css">
@@ -30,13 +34,13 @@
   <div class="mobile-menu">
     <ul class="mobile-menu-nav">
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">О компании</a>
+        <a href="./about.php" class="mobile-menu-link">О компании</a>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Контрактное производство</a>
+        <a href="./contract.php" class="mobile-menu-link">Контрактное производство</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
-            <a href="" class="mobile-submenu-link">Автомобильная химия</a>
+            <a href="./carchem.php" class="mobile-submenu-link">Автомобильная химия</a>
           </li>
           <li class="mobile-submenu-item">
             <a href="" class="mobile-submenu-link">Бытовая химия</a>
@@ -56,10 +60,10 @@
         </ul>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Собственные торговые марки</a>
+        <a href="./trademarks.php" class="mobile-menu-link">Собственные торговые марки</a>
         <ul class="mobile-submenu">
           <li class="mobile-submenu-item">
-            <a href="#" class="mobile-submenu-link">Автохимия AG-Tech</a>
+            <a href="./carchem-ag-tech.php" class="mobile-submenu-link">Автохимия AG-Tech</a>
           </li>
           <li class="mobile-submenu-item">
             <a href="#" class="mobile-submenu-link">Автохимия AP</a>
@@ -70,7 +74,7 @@
         <a href="#" class="mobile-menu-link">Новости</a>
       </li>
       <li class="mobile-menu-item">
-        <a href="#" class="mobile-menu-link">Контакты</a>
+        <a href="./contact.php" class="mobile-menu-link">Контакты</a>
       </li>
     </ul>
     <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
