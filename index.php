@@ -2,8 +2,8 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- Предзагрузка локальных шрифтов (оставь как есть, это правильно) -->
   <link rel="preload" href="/fonts/notosans-cyrillic-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/notosans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -147,7 +147,7 @@
       <svg class="button-icon" width="20" height="20">
         <use href="img/sprite.svg#phone"></use>
       </svg>
-      <div class="button-text">Получить консультацию</div>
+      <span class="button-text">Получить консультацию</span>
     </button>
   </nav>
   <!-- /.navbar -->
