@@ -68,9 +68,10 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
-      <svg class="logo-svg footer-logo">
-        <use href="img/sprite.svg#logo"></use>
-      </svg>
+      <a href="./" class="footer-logo">
+        <svg class="logo-svg footer-logo">
+          <use href="img/sprite.svg#logo"></use>
+        </svg></a>
       <a href="tel:+79816861014" class="footer-phone">+7 (981) 686-10-14</a>
       <div class="footer-info">
         <svg class="footer-top-icon" width="24" height="24">
