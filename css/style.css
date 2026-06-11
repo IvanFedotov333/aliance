@@ -1146,9 +1146,10 @@ body {
   text-decoration: none;
 }
 .footer-separator {
-  color: #ebebf0;
+  border: none;
   background-color: #ebebf0;
   height: 0.5px;
+  margin: 0;
 }
 .footer-bottom {
   padding-top: 3.125rem;
