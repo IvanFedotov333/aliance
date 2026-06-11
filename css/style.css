@@ -1408,6 +1408,10 @@ body {
     max-width: 70rem;
     margin: 0 6rem;
   }
+  .cta-image img {
+    height: auto;
+    width: 40%;
+  }
   .carchem-ag-tech-content,
   .carchem-production-content,
   .preparation-content {
@@ -1579,6 +1583,7 @@ body {
     display: flex;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     max-width: 50rem;
@@ -1796,5 +1801,16 @@ body {
   }
   .footer-bottom {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .navbar .navbar-button.button:hover {
+    background: #5c8ee6 !important; /* Твой фирменный синий, или тот, что на макете */
+    color: #ffffff !important; /* Белый текст */
+    transition: background 0.2s ease !important;
+  }
+  .header .navbar .navbar-button.button:hover .button-icon {
+    fill: #5c8ee6 !important;
   }
 }
