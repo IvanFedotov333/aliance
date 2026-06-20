@@ -4,7 +4,7 @@
 Современный стек, модальные окна и формы обратной связи.
 
 ## 🔗 Живой сайт
-[https://fedotov-ivan.ru/aliance/](https://fedotov-ivan.ru/aliance/) *(замени на реальную ссылку)*
+[https://fedotov-ivan.ru/aliance/](https://fedotov-ivan.ru/aliance/) 
 
 ## 🛠️ Ключевые особенности
 - **Адаптивность:** Корректное отображение на устройствах от 320px до 1920px
